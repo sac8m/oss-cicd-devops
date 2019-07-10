@@ -10,7 +10,7 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  demorg: 'cicd-rg1'
+  demorg: 'rg1'
   subscription : 'e2e_devops_buildazure'
   webappname : 'melonsamplewebapp'
   prodwebappname : 'melonsamplewebapp-prod'
