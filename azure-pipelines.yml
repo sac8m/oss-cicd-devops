@@ -10,8 +10,8 @@ variables:
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
-  demorg: 'melon-cicd-rg'
-  subscription : 'melonserviceconn'
+  demorg: 'cicd-rg1'
+  subscription : 'Pay-As-You-Go'
   webappname : 'melonsamplewebapp'
   prodwebappname : 'melonsamplewebapp-prod'
 
@@ -30,7 +30,7 @@ stages:
       inputs:
         azureSubscription: $(subscription)
         scriptLocation: inlineScript
-        inlineScript: 'az group create --location northeurope --name $(demorg)'
+        inlineScript: 'az group create --location eastus2 --name $(demorg)'
 
     
     - task: AzureResourceGroupDeployment@2
@@ -38,7 +38,7 @@ stages:
       inputs:
         azureSubscription: $(subscription)
         resourceGroupName: '$(demorg)'
-        location: 'North Europe'
+        location: 'eastus2'
         templateLocation: 'Linked artifact'
         csmFile: 'iac/webapp.json'
         csmParametersFile: 'iac/webapp.parameters.json'
