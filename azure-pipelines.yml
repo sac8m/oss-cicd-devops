@@ -12,8 +12,8 @@ variables:
   vmImageName: 'ubuntu-latest'
   demorg: 'cicd-rg1'
   subscription: 'e2e_devops_buildazure'
-  webappname: 'melonsamplewebapp'
-  prodwebappname: 'melonsamplewebapp-prod'
+  webappname: 'jlee130samplewebapp-dev'
+  prodwebappname: 'jlee130samplewebapp-prod'
 
 stages:
 - stage: Build
